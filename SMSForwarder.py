@@ -4,10 +4,11 @@ from error_alerts import telegram
 
 alerts = telegram(token='1736901269:AAFD99l-rVHfmPY70huJECgCNnZFCFq5c00') # @jxdevbot
 
-syndicate_channel = -920168991 # 'Blackjack' channel
+syndicate_channel = -994650087 # 'SMS forwarding' channel
 '''
 Syndicate numbers (https://dev.jxck.ml/sms-forwarder/syndicate/):
 +39 339 990 8320
++39 339 995 8837
 '''
 tristzan_channel = -965988103 # 'SMS forwarding' channel
 '''
