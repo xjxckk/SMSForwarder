@@ -1,10 +1,13 @@
+import locale
 from textwrap import dedent
 from flask import Flask, request, redirect
 from error_alerts import telegram
+os.environ['PYTHONIOENCODING'] = 'utf-8'
+myLocale=locale.setlocale(category=locale.LC_ALL, locale='en_GB.UTF-8')
 
 alerts = telegram(token='1736901269:AAFD99l-rVHfmPY70huJECgCNnZFCFq5c00') # @jxdevbot
 
-syndicate_channel = -994650087 # 'SMS forwarding' channel
+syndicate_channel = -1001896020314 # 'SMS forwarding' channel
 '''
 Syndicate numbers (https://dev.jxck.ml/sms-forwarder/syndicate/):
 +39 339 990 8320
