@@ -1,9 +1,9 @@
-import locale
+import sys # Otherwise print output will be ascii causing an error if trying to print accented characters è
+sys.stdout.reconfigure(encoding='utf-8')
+
 from textwrap import dedent
 from flask import Flask, request, redirect
 from error_alerts import telegram
-os.environ['PYTHONIOENCODING'] = 'utf-8'
-myLocale=locale.setlocale(category=locale.LC_ALL, locale='en_GB.UTF-8')
 
 alerts = telegram(token='1736901269:AAFD99l-rVHfmPY70huJECgCNnZFCFq5c00') # @jxdevbot
 
@@ -29,11 +29,13 @@ def redirect_to_main_site():
 def receive_sms_and_forward(client):
     if request.method == 'POST':
         '''Receive incoming text messages and forward to Telegram'''
+
+        print('Received SMS')
+        print()
+
         from_number = request.form['From']
         to_number = request.form['To']
         body = request.form['Body']
-        print('Received SMS')
-        print()
 
         message = dedent(f'''\
             From: {from_number}
