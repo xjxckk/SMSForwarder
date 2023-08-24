@@ -9,13 +9,13 @@ alerts = telegram(token='1736901269:AAFD99l-rVHfmPY70huJECgCNnZFCFq5c00') # @jxd
 
 syndicate_channel = -1001896020314 # 'SMS forwarding' channel
 '''
-Syndicate numbers (https://dev.jxck.ml/sms-forwarder/syndicate/):
+Syndicate numbers (https://dev.jxck.cf/sms-forwarder/syndicate/):
 +39 339 990 8320
 +39 339 995 8837
 '''
 tristzan_channel = -965988103 # 'SMS forwarding' channel
 '''
-Tristzan numbers (https://dev.jxck.ml/sms-forwarder/tristzan/):
+Tristzan numbers (https://dev.jxck.cf/sms-forwarder/tristzan/):
 +39 339 995 8629
 '''
 
@@ -23,7 +23,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def redirect_to_main_site():
-    return redirect('https://jxck.ml')
+    return redirect('https://jxck.cf')
 
 @app.route('/<client>/', methods=['GET', 'POST'])
 def receive_sms_and_forward(client):
