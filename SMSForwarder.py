@@ -3,9 +3,9 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 from textwrap import dedent
 from flask import Flask, request, redirect
-from error_alerts import telegram
+from error_alerts import alerts
 
-alerts = telegram(token='1736901269:AAFD99l-rVHfmPY70huJECgCNnZFCFq5c00') # @jxdevbot
+alerts = alerts(token='1736901269:AAFD99l-rVHfmPY70huJECgCNnZFCFq5c00') # @jxdevbot
 
 syndicate_channel = -1001896020314 # 'SMS forwarding' channel
 '''
